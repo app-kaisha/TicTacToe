@@ -1,3 +1,7 @@
+from art import logo
+import os
+
+
 class GameBoard:
     def __init__(self):
         self.board = [
@@ -10,6 +14,7 @@ class GameBoard:
         self.display_game_board()
 
     def display_game_board(self):
+        print(logo)
         print("\n" + self.board[0] + " | " + self.board[1] + " | " + self.board[2])
         print("---------")
         print(self.board[3] + " | " + self.board[4] + " | " + self.board[5])
@@ -44,7 +49,7 @@ class GameBoard:
                   (self.board[2] == self.board[5] == self.board[8] == self.get_player_symbol())
         diag_win = (self.board[0] == self.board[4] == self.board[8] == self.get_player_symbol()) | \
                    (self.board[2] == self.board[4] == self.board[6] == self.get_player_symbol())
-
+        os.system('clear')
         self.display_game_board()
         if row_win | col_win | diag_win:
             print(f'winner: {self.get_player_symbol()}\n')
@@ -55,7 +60,6 @@ class GameBoard:
 
 
 if __name__ == "__main__":
-    print("TicTacToe")
 
     game = GameBoard()
 
@@ -66,7 +70,6 @@ if __name__ == "__main__":
     game.board[8] = 'X'
 
     while game.is_game:
-
         game.validate_move()
         # TODO-5 Check if win condition exists
         game.check_win()
@@ -74,4 +77,3 @@ if __name__ == "__main__":
         # TODO-7 Inform Winner
         # TODO-8 Ask to play again
         # TODO-9 Play Again or End game
-
