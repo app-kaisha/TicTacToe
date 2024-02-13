@@ -12,7 +12,7 @@ Run `main.py` to play TicTacToe.
 Follow the instructions displayed in the terminal to play the game.
 Each player takes turns to enter their symbol position within the grid.
 Three of the same symbol in vertical, horizontal or diagonal wins the game.
-If all grid spaces are taken and no winner the game is declared a draw.
+If all grid spaces are taken and there is no winner, the game is declared a draw.
 At the end of the game you can enter 'Y' to play again or 'N' to quit the program.
 
 ## Contributing
