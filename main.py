@@ -44,7 +44,6 @@ class GameBoard:
             " ", " ", " ",
             " ", " ", " ",
         ]
-        # self.player = 0
         self.result = self.IN_GAME
         self.change_player()
 
